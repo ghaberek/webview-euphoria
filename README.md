@@ -26,9 +26,9 @@ You may also need to add `/usr/local/euphoria-4.1.0-Linux-x64/bin/` to your `LD_
 
 And then log out and back in for the changes to take effect.
 
-## Usage
+## Example
 
-### Example
+### Usage
 
     include webview.e
 
@@ -39,7 +39,15 @@ And then log out and back in for the changes to take effect.
     webview_run( w )
     webview_destroy( w )
 
+### Screenshots
+
+| Windows          | Linux          |
+| ---------------- | -------------- |
+| ![][windows.png] | ![][linux.png] |
+
 [webview]: https://github.com/webview/webview
 [Microsoft Edge Insider]: https://www.microsoftedgeinsider.com/en-us/download
 [libgtk-3-0]: https://launchpad.net/ubuntu/+source/gtk+3.0
 [libwebkit2gtk-4.0-37]: https://launchpad.net/ubuntu/+source/webkit2gtk
+[windows.png]: screenshots/windows.png
+[linux.png]: screenshots/linux.png

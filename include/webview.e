@@ -19,10 +19,10 @@ ifdef WINDOWS then
 constant webview_name = "webview.dll"
 
 elsifdef LINUX then
-constant webview_name = "webview.so"
+constant webview_name = "libwebview.so"
 
 elsifdef OSX then
-constant webview_name = "webview.dylib"
+constant webview_name = "libwebview.dylib"
 
 elsedef
 error:crash( "Platform not supported" )

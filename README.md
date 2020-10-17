@@ -6,7 +6,7 @@ Euphoria bindings for the [webview] library.
 
 ### Windows
 
-You will need to have [Microsoft Edge Insider] installed to use the Chromium-based **WebView2**. Webview *should* fall back to the original **EdgeHTML** engine if WebView2 is not found.
+You will need to have [Microsoft Edge Insider] installed to use the Chromium-based **WebView2**. The webview library *should* fall back to the original **EdgeHTML** engine if **WebView2** is not found.
 
     copy include\webview.e C:\Euphoria\include
     copy libs\webview.dll C:\Euphoria\bin
@@ -16,8 +16,15 @@ You will need to have [Microsoft Edge Insider] installed to use the Chromium-bas
 
 On Debian/Ubuntu, you will need to have [libgtk-3-0] and [libwebkit2gtk-4.0-37] installed. Unsure what the correct libs on other distros are but they should be similar (basically **GTK3** and **webview2gtk4**).
 
-    sudo cp include/webview.e /usr/local/euphoria-4.1.0-Linux-x64/
-    sudo cp libs/webview.so /usr/local/euphoria-4.1.0-Linux-x64/
+    sudo cp include/webview.e /usr/local/euphoria-4.1.0-Linux-x64/include/
+    sudo cp libs/libwebview.so /usr/local/euphoria-4.1.0-Linux-x64/bin/
+    sudo chmod a+x /usr/local/euphoria-4.1.0-Linux-x64/bin/libwebview.so
+
+You may also need to add `/usr/local/euphoria-4.1.0-Linux-x64/bin/` to your `LD_LIBRARY_PATH` environment variable for Euphoria to find the library correctly. Edit your `$HOME/.bashrc` and add this line to the end:
+
+    export LD_LIBRARY_PATH=.:/usr/local/euphoria-4.1.0-Linux-x64/bin/:$LD_LIBRARY_PATH
+
+And then log out and back in for the changes to take effect.
 
 ## Usage
 
